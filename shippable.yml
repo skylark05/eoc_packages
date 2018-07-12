@@ -1,0 +1,13 @@
+     
+language: none
+env:
+  - BUILD_TARGET=aarch64
+  - BUILD_TARGET=aarch32
+  - BUILD_TARGET=amd64
+  
+build:
+  ci:
+    - pushd $(shipctl get_resource_state "eoc_manifests_gitRepo")
+    - mkdir packages
+    - cp "$SHIPPABLE_BUILD_DIR/*" "packages/"
+    - echo You are now building eoc_manifests with packages at commit $COMMIT for target $BUILD_TARGET
