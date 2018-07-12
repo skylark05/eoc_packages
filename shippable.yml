@@ -13,5 +13,5 @@ build:
     - pwd
     - mkdir packages
     - ls -ltra
-    - cp -r "$SHIPPABLE_BUILD_DIR/*" "packages/"
+    - cp -r "$SHIPPABLE_BUILD_DIR"/* "packages/"
     - echo You are now building eoc_manifest with packages at commit $COMMIT for target $BUILD_TARGET
