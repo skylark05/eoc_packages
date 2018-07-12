@@ -7,7 +7,7 @@ env:
   
 build:
   ci:
-    - pushd $(shipctl get_resource_state "eoc_manifests_gitRepo")
+    - pushd $(shipctl get_resource_state "eoc_manifest_gitRepo")
     - mkdir packages
     - cp "$SHIPPABLE_BUILD_DIR/*" "packages/"
-    - echo You are now building eoc_manifests with packages at commit $COMMIT for target $BUILD_TARGET
+    - echo You are now building eoc_manifest with packages at commit $COMMIT for target $BUILD_TARGET
